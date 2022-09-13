@@ -14,3 +14,4 @@ STEP 2: INSTALL NECESSORRY DEPENDENCIES
 Linux: pip3 install -r requirements.txt
 
 Windows: pip install -r requirements.txt
+ 
