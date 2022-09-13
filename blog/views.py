@@ -1,3 +1,4 @@
+from urllib.robotparser import RequestRate
 from django.http import HttpResponse
 from django.shortcuts import render
 from blog.models import Post, Category,Contact
@@ -34,17 +35,31 @@ def category(request, url):
     return render(request, "category.html", {'cat': cat, 'posts': posts,'cats': cats})
 
 def contact(request):
-     cats = Category.objects.all() #fetching categories to every page
-     if request.method =="POST":
+    check = ['select * from', 'SELECT * FROM', 'union select', 'UNION SELECT', 'select', 'union', 'SELECT', 'UNION', '"', '""', "&&", 'OR'] # checking for bad characters
+
+
+    if request.method == "GET":
+        return render(request,'contact.html')
+
+    cats = Category.objects.all() #fetching categories to every page
+    if request.method =="POST":
         name=request.POST.get('name')
         email=request.POST.get('email')
         message=request.POST.get('message')
-        contact=Contact(name=name, email=email,message=message,date=datetime.today())
-        contact.save()
 
-
-     return render(request , 'contact.html',{'cats': cats})
+        if not name or not email or not message:
+            return error(request)
+        elif any(x in name for x in check) or any(x in email for x in check) or any(x in message for x in check):
+            return error(request)
+        else:
+            contact=Contact(name=name, email=email,message=message,date=datetime.today())
+            contact.save()
+            return render(request , 'contact.html',{'cats': cats})
      
 def about(request):
     cats = Category.objects.all() #fetching categories to every page
     return render(request , 'about.html',{'cats': cats})     
+
+
+def error(request):
+    return render(request, 'errorPage.html')
