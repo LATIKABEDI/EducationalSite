@@ -1,0 +1,4 @@
+django-material-admin
+django-tinymce
+pillow
+python-decouple
