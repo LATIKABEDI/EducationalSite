@@ -1,13 +1,25 @@
-.bg-primary{
-background:#477091!important;
-}
+
 
 .mt20{
-margin-top:20px;
+    margin-top:20px;
 }
-
+    
 .container-custom{
-width:95%!important;
-margin:auto;
+    width:95%!important;
+    margin:auto;
+}
+    
+.cat-img{
+    height: 250px;
+    width: 250px;
 }
 
+.cat-title{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.post-img{
+    height: 250px;
+    width: 250px;
+}

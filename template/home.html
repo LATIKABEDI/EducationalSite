@@ -5,7 +5,7 @@
 {%block content%}
 
 
-<div class="container-custom">
+<div class="container-custom" style="margin-top:20px;">
 
 
     <!-- Set up your HTML -->
@@ -18,16 +18,16 @@
 
             <div class="img-container">
 
-                <img src="/media/{{cat.image}}" class="responsive-img" alt="">
+                <img src="/media/{{cat.image}}" class="cat-img" alt="">
 
             </div>
             <div class="card-content">
 
-                <div class="card-title">
+                <div class="center-align cat-title">
                     {{cat.title}}
                 </div>
 
-                <p class="truncate">{{cat.description}}</p>
+                <p class="center-align truncate">{{cat.description}}</p>
                 <div class="container center-align mt20">
                     <a href="/category/{{cat.url}}" class="btn bg-primary">VIEW</a>
                 </div>
@@ -49,26 +49,24 @@
 
     <div class="row">
 
-        <div class="col s12 ">
+        <!-- <div class="col s12 "> -->
 
 
             {%for p in posts %}
 
             <div class="row">
 
-                <div class="col s12 m8">
-
-
+                <div class="col s12 m8"  style="margin-top:50px;">
+                    <div class="col s12 m4">
+                        <img src="/media/{{p.image}}" class="post-img" style="margin-top:10px; margin-bottom: 30px;">
+    
+                    </div>
                     {{p.content |truncatewords:60 | safe}}
                     <div class="mt20">
                         <a href="/blog/{{p.url}}" class="btn  bg-primary ">Read More..</a>
                     </div>
                 </div>
 
-                <div class="col s12 m4">
-                    <img src="/media/{{p.image}}" class="responsive-img" style="margin-top:50px;">
-
-                </div>
 
             </div>
 
@@ -76,7 +74,7 @@
             {%endfor %}
 
 
-        </div>
+        <!-- </div> -->
 
 
     </div>
