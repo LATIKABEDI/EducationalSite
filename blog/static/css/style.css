@@ -1,4 +1,7 @@
 
+#brand-logo{
+    font-weight: 900;
+}
 
 .mt20{
     margin-top:20px;
@@ -23,3 +26,8 @@
     height: 250px;
     width: 250px;
 }
+
+.main-body1{
+    margin-top: 100px;
+}
+

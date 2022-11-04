@@ -1,0 +1,50 @@
+
+.barhead{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    height: 55px;
+    top: 0px;
+    left:0px;
+    right:0px;
+    
+    background-color:black;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 500; 
+}
+.leftsection{
+    margin-right: 135px;
+}
+.leftsection,.rightsection,.midsection{
+    display: flex;
+    align-items: center;
+}
+.midsection{
+    margin-left: 50px;
+    margin-right: 0px;
+}
+.rightsection{
+    margin-right: 15px;
+    margin-left: 0px;
+}
+.logo-header{
+    margin-left: 40px;
+    color: white;
+    font-weight: 900;
+    font-size: large;
+}
+.contact,.about,.home,.dropdown-trigger{
+    text-decoration: none;
+    color: white;
+    margin-right: 20px ;
+    font-weight: bold;
+}
+.contact:hover,.about:hover,
+.home:hover,.dropdown-trigger:hover{
+  cursor: pointer;
+}
+
+
+
+
