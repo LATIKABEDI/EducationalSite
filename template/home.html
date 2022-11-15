@@ -3,27 +3,9 @@
 {%block title%} Home {%endblock%}
 
 {%block content%}
-<!-- {% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %} -->
-{% if messages %}
-<div class=" alert alert-warning alert-dismissible fade show" role="alert">
-    <ul class="messages">
-    <strong>Warning :</strong> {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-</ul>
-  </div>
-  {% endif %}
 
-<div class="container-custom" style="margin-top:100px;">
+
+<div class="container-custom" style="margin-top:90px;">
 
 
     <!-- Set up your HTML -->

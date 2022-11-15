@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
-from .views import home, post,category,contact,about,error,signup,login
+from .views import home, post,category,contact,about,error,signup,login, search
 
 urlpatterns = [
     path('', home),
@@ -28,5 +28,6 @@ urlpatterns = [
     path('about/' ,about),
     path('blog/<slug:url>', post),
     path('category/<slug:url>',category),
-    path('error/', error)
+    path('error/', error),
+    path('search/', search),
 ]

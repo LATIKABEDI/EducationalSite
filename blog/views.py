@@ -103,7 +103,8 @@ def signup(request):
         return render(request, 'signUpPage.html')
         
 
-
+def search(request):
+    return HttpResponse('THIS IS SEARCH PAGE')
     
 
 def login(request):
